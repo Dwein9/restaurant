@@ -5,5 +5,15 @@
   "main": "index.js",
   "repository": {},
   "author": "David Weinstein",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "babel-loader": "^7.1.2",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-core": "^6.26.0",
+    "webpack": "^3.6.0"
+  },
+  "scripts": {
+    "build": "webpack"
+  }
 }
