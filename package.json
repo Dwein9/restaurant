@@ -1,0 +1,9 @@
+{
+  "name": "restaurant",
+  "version": "1.0.0",
+  "description": "Duplicate a restaurant site using React",
+  "main": "index.js",
+  "repository": {},
+  "author": "David Weinstein",
+  "license": "MIT"
+}
