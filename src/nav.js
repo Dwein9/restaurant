@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 class Nav extends Component {
   render(){
     return (
-      <nav className="">
-        <div className="">
-          <Link className="nav" to='/'>{this.props.header}</Link>
-        </div>
+      <nav>
+        <NavLink to="/about" exact activeStyle={{ background: 'darkblue'}}>About</NavLink>
+        <NavLink to="/" exact activeStyle={{ background: 'darkblue' }}>{this.props.header}</NavLink>
+        <NavLink to="/menus" exact activeStyle={{ background: 'darkblue' }}>Menus</NavLink>
       </nav>
+
     )
   }
 }
