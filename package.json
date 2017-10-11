@@ -19,5 +19,8 @@
   "scripts": {
     "build": "webpack",
     "start": "react-scripts start"
+  },
+  "dependencies": {
+    "react-router-dom": "^4.2.2"
   }
 }

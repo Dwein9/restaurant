@@ -1,11 +1,23 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
+import './style/index.css'
+import Nav from './nav'
 
-export default class App extends Component {
-  render(){
+class App extends Component {
+  render() {
     return (
       <div>
-        <h1> Hello World </h1>
-      </div>
+        <Router>
+          <div>
+            <Nav header={"The Best Restaurant"}/>
+              <div className='container'>
+                <div className="row"></div>
+              </div>
+          </div>
+      </Router>
+    </div>
     )
   }
 }
+
+export default App;
