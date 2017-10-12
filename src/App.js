@@ -9,8 +9,13 @@ class App extends Component {
     const paths = ['/', '/about', '/menus', '/events', '/press', '/photos']
 
     let routes = paths.map((p) => {
-      return (<Route exact path={p} render={() => <h1>{p.slice(1)}</h1> } />)
+      if (p === '/'){
+        return (<Route exact path={p} render={() => <h1>HOME</h1> } />)
+      } else {
+        return (<Route exact path={p} render={() => <h1>{p.slice(1).toUpperCase()}</h1> } />)
+      }
     })
+
     return routes
   }
 
