@@ -1,18 +1,26 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
-
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './style/index.css'
 import Nav from './nav'
 
 class App extends Component {
+
+  createRoutes = () => {
+    const paths = ['/', '/about', '/menus', '/events', '/press', '/photos']
+
+    let routes = paths.map((p) => {
+      return (<Route exact path={p} render={() => <h1>{p.slice(1)}</h1> } />)
+    })
+    return routes
+  }
+
   render() {
+    const paths = ['/', 'about', 'menus', 'events', 'press', 'photos']
     return (
       <Router>
         <div>
-          <Nav header={"The Best Restaurant"} />
-          <Route exact path="/" render={() => <h1>Home</h1>} />
-          <Route exact path="/about" render={() => <h1>About</h1>} />
-          <Route exact path="/menus" render={() => <h1>Menus</h1>} />
+          <Nav header={"The Best Restaurant"} items ={paths} />
+          {this.createRoutes()}
         </div>
       </Router>
     )
