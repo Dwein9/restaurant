@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './style/index.css'
 import Nav from './nav'
+import Photos from './photos'
 
 class App extends Component {
 
@@ -11,6 +12,8 @@ class App extends Component {
     let routes = paths.map((p) => {
       if (p === '/'){
         return (<Route exact path={p} render={() => <h1>HOME</h1> } />)
+      } else if (p === '/photos') {
+        return (<Route exact path={p} component={Photos} />)
       } else {
         return (<Route exact path={p} render={() => <h1>{p.slice(1).toUpperCase()}</h1> } />)
       }

@@ -3,3 +3,12 @@
   font-weight: bold;
   background-color: purple;
 }
+
+.photos {
+  height: 120px;
+  width: 120px;
+}
+
+li {
+  list-style-type: none;
+}
