@@ -4,7 +4,7 @@ class PhotoList extends Component {
 
   showPhotos = () => {
     let photos = this.props.photos.map((photo) => {
-      return ( <li> <img className="photos"  src={photo.dsc} alt=""/></li>)
+      return ( <li> <img key={photo.id} className="photos"  src={photo.src} alt={photo.alt}/></li>)
     })
     return photos
   }

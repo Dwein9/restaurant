@@ -8,7 +8,11 @@ import restaurantAbove from './img/restaurant-above.jpg'
 class Photos extends Component {
 
   render(){
-    const data = [ { id: 1, dsc: foodBurger}, { id: 2, dsc: foodFries}, { id: 1, dsc: restaurantAbove} ]
+    const data = [
+      { id: 1, src: foodBurger, alt:"Food: Burger"},
+      { id: 2, src: foodFries, alt:"Food: French fries"},
+      { id: 1, src: restaurantAbove, alt:"Restarant tables from above"}
+    ]
     return (
       <PhotoList photos = {data}/>
     )

@@ -11,11 +11,12 @@ class App extends Component {
 
     let routes = paths.map((p) => {
       if (p === '/'){
-        return (<Route exact path={p} render={() => <h1>HOME</h1> } />)
+        return (<Route exact path={p} render={() => <h1>The Best Restaurant</h1> } />)
       } else if (p === '/photos') {
         return (<Route exact path={p} component={Photos} />)
       } else {
-        return (<Route exact path={p} render={() => <h1>{p.slice(1).toUpperCase()}</h1> } />)
+        let heading = p.charAt(1).toUpperCase()+p.slice(2)
+        return (<Route exact path={p} render={() => <h1>{heading}</h1> } />)
       }
     })
 

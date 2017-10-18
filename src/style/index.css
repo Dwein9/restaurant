@@ -1,7 +1,10 @@
 .nav {
-  font-size: 35px;
+  font-size: 15px;
   font-weight: bold;
-  background-color: purple;
+  width: 100px;
+  padding: 12px;
+  color: darkblue;
+  background: orange;
 }
 
 .photos {

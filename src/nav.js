@@ -4,13 +4,14 @@ import { NavLink } from 'react-router-dom'
 class Nav extends Component {
 
   createLinks = () => {
-    const paths = ['/', 'about', 'menus', 'events', 'press', 'photos']
+    const paths = ['/', '/about', '/menus', '/events', '/press', '/photos']
 
     let routes = paths.map((path) => {
       if (path === '/'){
-        return (<NavLink to={'/'} exact activeStyle={{ background: 'darkblue'}}>{this.props.header}</NavLink>)
+        return (<NavLink className="nav" to={'/'} exact activeStyle={{ background: 'darkblue', color: 'hotpink'}}>{this.props.header}</NavLink>)
       } else {
-        return (<NavLink to={path} exact activeStyle={{ background: 'darkblue'}}>{path}</NavLink>)
+        let pathFormatted = path.charAt(1).toUpperCase()+path.slice(2)
+        return (<NavLink className="nav" to={path} exact activeStyle={{ background: 'darkblue', color: 'hotpink'}}>{pathFormatted}</NavLink>)
       }
     })
     return routes
