@@ -15,3 +15,8 @@
 li {
   list-style-type: none;
 }
+
+.photo-show {
+  height: 240px;
+  width: 240px;
+}

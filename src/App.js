@@ -9,14 +9,14 @@ class App extends Component {
   createRoutes = () => {
     const paths = ['/', '/about', '/menus', '/events', '/press', '/photos']
 
-    let routes = paths.map((p) => {
+    let routes = paths.map((p, i) => {
       if (p === '/'){
-        return (<Route exact path={p} render={() => <h1>The Best Restaurant</h1> } />)
+        return (<Route exact path={p} render={() => <h1>The Best Restaurant</h1> } key={i}/>)
       } else if (p === '/photos') {
         return (<Route exact path={p} component={Photos} />)
       } else {
         let heading = p.charAt(1).toUpperCase()+p.slice(2)
-        return (<Route exact path={p} render={() => <h1>{heading}</h1> } />)
+        return (<Route exact path={p} render={() => <h1>{heading}</h1> } key={i}/>)
       }
     })
 
@@ -24,11 +24,13 @@ class App extends Component {
   }
 
   render() {
-    const paths = ['/', 'about', 'menus', 'events', 'press', 'photos']
+    // const paths = ['/', 'about', 'menus', 'events', 'press', 'photos']
     return (
       <Router>
         <div>
-          <Nav header={"The Best Restaurant"} items ={paths} />
+          <Nav header={"The Best Restaurant"}
+            // items ={paths}
+           />
           {this.createRoutes()}
         </div>
       </Router>
