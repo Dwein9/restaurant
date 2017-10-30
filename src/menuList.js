@@ -1,18 +1,28 @@
 import React, { Component } from 'react'
+import MenuDetail from './menuDetail'
 
 class MenuList extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { selection: false }
+  }
 
-createCourses = () => {
-  let courses = this.props.courses.map((course, i) => {
-    return (
-      <li className="courses" key={i}>
-        <a> {course} </a>
-      </li>
-    )
-  })
-  return courses
-}
+  onClick(course){
+    this.setState({
+      selection: course
+    })
+  }
 
+  createCourses = () => {
+    let courses = this.props.courses.map((course, i) => {
+      return (
+        <li className="courses" key={i}>
+          <a onClick={this.onClick.bind(this, course)}> {course} </a>
+        </li>
+      )
+    })
+    return courses
+  }
 
   render(){
     return (
@@ -21,6 +31,9 @@ createCourses = () => {
         <ul>
           {this.createCourses()}
         </ul>
+        <div>
+          <MenuDetail selection={this.state.selection} />
+        </div>
       </div>
     )
   }
