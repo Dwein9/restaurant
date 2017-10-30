@@ -1,5 +1,5 @@
 .nav {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: bold;
   width: 100px;
   padding: 12px;
@@ -12,11 +12,27 @@
   width: 120px;
 }
 
-li {
+.photo-list {
   list-style-type: none;
 }
 
 .photo-show {
   height: 240px;
   width: 240px;
+}
+
+.courses {
+  align-content: center;
+  list-style-type: none;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  width: 100px;
+  padding: 12px;
+  color: darkblue;
+}
+
+.courses a:hover {
+  cursor: pointer;
+  color: orange;
 }

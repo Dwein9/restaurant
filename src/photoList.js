@@ -10,9 +10,9 @@ class PhotoList extends Component {
   showPhotos = () => {
     let photos = this.props.photos.map((photo) => {
       return (
-        <li key={photo.id}>
+        <li className="photo-list" key={photo.id}>
           <a onClick={this.selectPhoto.bind(this, photo.id)} >
-            <img className="photos"  src={photo.src} alt={photo.alt}/>
+            <img className="photos" src={photo.src} alt={photo.alt}/>
           </a>
         </li>)
     })

@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 class Nav extends Component {
 
   createLinks = () => {
-    const paths = ['/', '/about', '/menus', '/events', '/press', '/photos']
+    const paths = ['/about', '/menus', '/events', '/', '/press', '/photos', '/contact']
 
     let routes = paths.map((path,i) => {
       if (path === '/'){
