@@ -11,7 +11,14 @@ class Photos extends Component {
     const data = [
       { id: 1, src: foodBurger, alt:"Food: Burger"},
       { id: 2, src: foodFries, alt:"Food: French fries"},
-      { id: 3, src: restaurantAbove, alt:"Restarant tables from above"}
+      { id: 3, src: restaurantAbove, alt:"Restarant tables from above"},
+      { id: 4, src: foodBurger, alt:"Food: Burger"},
+      { id: 5, src: foodBurger, alt:"Food: Burger"},
+      { id: 6, src: foodBurger, alt:"Food: Burger"},
+      { id: 7, src: foodBurger, alt:"Food: Burger"},
+      { id: 8, src: foodBurger, alt:"Food: Burger"},
+      { id: 9, src: foodBurger, alt:"Food: Burger"},
+      { id: 10, src: foodBurger, alt:"Food: Burger"},
     ]
     return (
       <PhotoList photos = {data}/>

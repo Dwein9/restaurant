@@ -7,7 +7,10 @@ export default function PhotoShow(props){
       )
     } else {
     return (
-      <img key={props.photo.id} className="photo-show"  src={props.photo.src} alt={props.photo.alt}/>
+      <div>
+        <img key={props.photo.id} className="photo-top"  src={props.photo.src} alt={props.photo.alt}/>
+        <h2 className="photo-top-text">{props.photo.alt}</h2>
+      </div>
     );
   }
 }

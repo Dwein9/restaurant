@@ -7,18 +7,36 @@
   background: orange;
 }
 
+.photo-square {
+  float: left;
+  position: relative;
+  width: 30%;
+  padding-bottom: 30%;
+  margin: 1.66%;
+  overflow: hidden
+}
+
 .photos {
-  height: 120px;
-  width: 120px;
+  position: absolute;
+  height: 80%;
+  width: 90%;
+  padding: 10% 5%;
 }
 
-.photo-list {
-  list-style-type: none;
+.photo-desc {
+  font-size: 16px;
+  font-weight: bolder;
+  color: orange;
 }
 
-.photo-show {
-  height: 240px;
-  width: 240px;
+.photo-top {
+  height: 50%;
+  width: 50%;
+}
+
+.photo-top-text {
+  height: 50%;
+  width: 50%;
 }
 
 .courses {
