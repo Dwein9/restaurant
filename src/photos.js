@@ -19,6 +19,8 @@ class Photos extends Component {
       { id: 8, src: foodBurger, alt:"Food: Burger"},
       { id: 9, src: foodBurger, alt:"Food: Burger"},
       { id: 10, src: foodBurger, alt:"Food: Burger"},
+      { id: 11, src: restaurantAbove, alt:"Restarant tables from above"},
+
     ]
     return (
       <PhotoList photos = {data}/>
