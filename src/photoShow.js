@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 export default class PhotoShow extends Component {
 
   componentWillReceiveProps(next){
-    debugger;
     this.setState({ slideNumber: next.photo.id })
   }
 
